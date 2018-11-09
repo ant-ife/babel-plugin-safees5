@@ -25,9 +25,9 @@ describe('transform code', function () {
         'transform-runtime',
         [safees5, {
           ignoreFiles: [
-            path.resolve(__dirname, '../fixtures/src')
+            path.resolve(__dirname, '../fixtures/src'),
           ],
-        }]
+        }],
       ],
     })
 
@@ -40,7 +40,7 @@ describe('transform code', function () {
             '/Users/xkw/github/babel-plugin-safees5/test/fixtures/src/code.js',
             'src/code.js',
           ],
-        }]
+        }],
       ],
     })
   })
@@ -57,7 +57,7 @@ describe('transform code', function () {
               method: 'includes',
             },
           ],
-        }]
+        }],
       ],
     })
   })

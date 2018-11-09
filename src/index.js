@@ -19,7 +19,7 @@ module.exports = function () {
         const { ignoreFiles, ignoreCallers } = state.opts
 
         const file = R.path(['hub', 'file', 'opts', 'filename'], path)
-        const ignoreFilesContains =  R.any(
+        const ignoreFilesContains = R.any(
           R.pipe(
             relativePath,
             dirIncludes(R.__, relativePath(file)),
