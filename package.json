@@ -14,7 +14,8 @@
     "babel",
     "plugin",
     "safe",
-    "es5"
+    "es5",
+    "without-polyfill"
   ],
   "author": "xiekw2010",
   "license": "MIT",
