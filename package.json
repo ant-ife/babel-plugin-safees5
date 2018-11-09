@@ -4,8 +4,9 @@
   "description": "prevent your code from dangerous code in es5 platform like ary.includes, str.startWith, etc",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_ENV=test mocha test/unit/**/*.test.js",
+    "test": "npm run lint && NODE_ENV=test mocha test/unit/**/*.test.js",
     "coverage": "nyc --reporter=html --reporter=text mocha test/unit/**/*.test.js",
+    "report-coverage": "npm run coverage && nyc report --reporter=text-lcov > coverage.lcov && codecov",
     "test:build": "babel test/fixtures/src -d test/fixtures/dist",
     "lint": "eslint --fix --ext .js ./ test --ignore-pattern *.min.js"
   },
