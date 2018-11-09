@@ -32,6 +32,7 @@
     "eslint-config-antife": "^1.0.0",
     "mocha": "^4.1.0",
     "nyc": "^13.0.1",
-    "pre-commit": "^1.2.2"
+    "pre-commit": "^1.2.2",
+    "codecov": "^3.1.0"
   }
 }
