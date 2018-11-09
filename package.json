@@ -1,0 +1,36 @@
+{
+  "name": "babel-plugin-safees5",
+  "version": "1.0.0",
+  "description": "prevent your code from dangerous code in es5 platform like ary.includes, str.startWith, etc",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_ENV=test mocha test/unit/**/*.test.js",
+    "coverage": "nyc --reporter=html --reporter=text mocha test/unit/**/*.test.js",
+    "test:build": "babel test/fixtures/src -d test/fixtures/dist",
+    "lint": "eslint --fix --ext .js ./ test --ignore-pattern *.min.js"
+  },
+  "keywords": [
+    "babel",
+    "plugin",
+    "safe",
+    "es5"
+  ],
+  "author": "xiekw2010",
+  "license": "MIT",
+  "dependencies": {
+    "ramda": "^0.25.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-code-frame": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.22.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "core-js": "^2.5.7",
+    "eslint": "^4.14.0",
+    "eslint-config-antife": "^1.0.0",
+    "mocha": "^4.1.0",
+    "nyc": "^13.0.1",
+    "pre-commit": "^1.2.2"
+  }
+}
