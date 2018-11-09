@@ -133,8 +133,11 @@ Add the plugin to your .babelrc configuration:
      ignoreFiles: [
        'src/router',
      ],
-     ignoreInstanceNames: [
-       'this',
+     ignoreCallers: [
+       {
+          caller: 'src',
+          method: 'includes',
+       },
      ]
    }],
   ],
@@ -143,8 +146,8 @@ Add the plugin to your .babelrc configuration:
 
 | key                 | default | required | description                               |
 | ------------------- | ------- | -------- | ----------------------------------------- |
-| ignoreFiles         | null    | false    | The files to ignore this plugin           |
-| ignoreInstanceNames | null    | false    | The instances names to ignore this plugin |
+| ignoreFiles         | null    | false    | The files to ignore this plugin, relative to your project's package.json dir   |
+| ignoreCallers | null    | false    | The ignoreCallers to ignore this plugin |
 
 
 

@@ -62,5 +62,25 @@ exports.findMainDirectory = (baseDir, filename) => {
     }
     pathNow = path.join(pathNow, '..')
   }
+  if (result) {
+    result = path.basename(result)
+  }
   return result
 }
+
+exports.dirIncludes = R.curry((source, target) => {
+  if (source === target) {
+    return true
+  }
+
+  let dirs = []
+  try {
+    dirs = R.pipe(
+      fs.readdirSync,
+      R.map(f => path.join(source, f))
+    )(source)
+    return R.contains(target, dirs)
+  } catch (err) {
+    return false
+  }
+})
